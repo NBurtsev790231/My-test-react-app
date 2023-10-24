@@ -3,5 +3,9 @@
     "@astral/eslint-config-base",
     "react-app",
     "react-app/jest"
-  ]
+  ],
+
+  "rules": {
+    "prettier/prettier" : "off"
+  }
 }
