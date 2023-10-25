@@ -8,7 +8,7 @@ const {
   register,
   reset, 
   handleSubmit, 
-  formState: {errors, isValid}} = useForm();
+  formState: {errors, isValid }} = useForm();
 
 const [namePhoto, setNamePhoto] = useState();
 
@@ -50,7 +50,7 @@ const onSubmit = (data) => {
           <div>
             <label>Ссылка на фото</label>
             <input
-            placeholder='https://images.unsplash.com/photo-1619221881833-5e5aeff458fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzODkzODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Nzg0NjkxNzQ&ixlib=rb-4.0.3&q=80&w=400'
+            placeholder='https://images.unsplash.com/photo-1619221881833-5e5aeff458fd?'
             {...register('link', {
             required: 'Поле обязательно к заполнению'})}
             onChange={event => setLinkPhoto(event.target.value)}
