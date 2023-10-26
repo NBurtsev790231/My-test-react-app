@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
+import { ButtonForm, ContainerForm, ErrorForm, InputForm, LabelForm, SectionForm, TextForm, WrapperForm } from './styles';
+
 //Реализация формы
 export const Form = (props) => {
 
@@ -27,10 +29,10 @@ const onSubmit = (data) => {
 
 //Форма для ввода фото и описания
   return (
-      <div>
-        <form onSubmit={handleSubmit((data) => onSubmit())}>
-          <label>Название фото</label>
-          <input
+      <ContainerForm>
+        <WrapperForm onSubmit={handleSubmit((data) => onSubmit())}>
+          <LabelForm>Название фото</LabelForm>
+          <InputForm
             maxLength={30}
             placeholder='Национальный парк'
             {...register('name',
@@ -41,15 +43,16 @@ const onSubmit = (data) => {
                   message: 'Минимум три символа',
                 },
               })}
-            onChange={event => setNamePhoto(event.target.value)} />
+            onChange={event => setNamePhoto(event.target.value)} 
+            />
           <div>
             {errors?.name &&
-              <p>{errors?.name?.message || 'Error'}</p>};
+              <ErrorForm>{errors?.name?.message || 'Error'}</ErrorForm>};
           </div>
 
-          <div>
-            <label>Ссылка на фото</label>
-            <input
+          <SectionForm>
+            <LabelForm>Ссылка на фото</LabelForm>
+            <InputForm
             placeholder='https://images.unsplash.com/photo-1619221881833-5e5aeff458fd?'
             {...register('link', {
             required: 'Поле обязательно к заполнению'})}
@@ -57,13 +60,13 @@ const onSubmit = (data) => {
             />
             <div>
             {errors?.link &&
-              <p>{errors?.link?.message || 'Error'}</p>};
+              <ErrorForm>{errors?.link?.message || 'Error'}</ErrorForm>};
             </div>
-          </div>
+          </SectionForm>
 
 
           <div>
-            <p>Описание фото</p>;
+            <LabelForm>Описание фото</LabelForm>;
             <input type="checkbox" 
             onChange={(event) => event.target.checked === true?
               setOnCheckBox(true) : setOnCheckBox(false)}
@@ -72,20 +75,20 @@ const onSubmit = (data) => {
               checked={onCheckBox}
             />
             
-            <textarea
+            <TextForm
             defaultValue=''
             hidden={!onCheckBox}
             {...register('comment', {
               required: onCheckBox,
             })}
-            onChange={(e) => setCommentPhoto(e.target.value)}
+            onChange={(event) => setCommentPhoto(event.target.value)}
             />
             {errors.comment && onCheckBox &&
-            <p>Поле обязательно к заполнению</p>}
+            <ErrorForm>Поле обязательно к заполнению</ErrorForm>}
           </div>
           
-          <input type='submit' value='Добавить фото'/>
-        </form>
-      </div>
+          <ButtonForm>Добавить фото</ButtonForm>
+        </WrapperForm>
+      </ContainerForm>
   );
 };
