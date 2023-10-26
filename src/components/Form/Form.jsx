@@ -21,7 +21,7 @@ const [onCheckBox, setOnCheckBox] = useState();
 const [commentPhoto, setCommentPhoto] = useState();
 
 const onSubmit = (data) => {
-  props.newPhoto(namePhoto, linkPhoto, commentPhoto)
+  props.NewImage(namePhoto, linkPhoto, commentPhoto)
   setOnCheckBox(false)
   setCommentPhoto('')
   reset();
