@@ -37,7 +37,7 @@ const onSubmit = (data) => {
             placeholder='Национальный парк'
             {...register('name',
               {
-                required: 'поле обязательно к заполнению',
+                required: 'Поле обязательно к заполнению',
                 minLength: {
                   value: 3,
                   message: 'Минимум три символа',

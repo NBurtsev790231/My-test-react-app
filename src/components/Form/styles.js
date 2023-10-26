@@ -16,7 +16,7 @@ margin: 0px auto;
 padding:5px;
 display: block;
 color:#064ba6;
-font-size: 17px;
+font-size: 20px;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 font-weight: bold;
 `;
@@ -55,5 +55,6 @@ font-weight: bold;
 export const ErrorForm = styled.p`
   margin: 0 ;
   display: block;
-  color:red;
+  color: red;
+  font-size: 17px;
 `;
