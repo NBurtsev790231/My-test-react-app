@@ -8,42 +8,6 @@ justify-content: center;
 margin: 10px auto; 
 `;
 
-export const ImageTextArea = styled.textarea`
-  width: 300px;
-  height: 50px;
-  background-color: white;
-  border-radius: 10px;
-  resize: none;
-  color: black;
-  font-size: 16px;
-  font-family: "Times New Roman", Times, serif;
-`;
-
-export const ImageName = styled.h1`
-  font-size:24px;
-  margin:0px 0px 10px;
-  width:330px;
-  height:55px;
-  overflow: hidden; 
-  word-wrap: break-word;
-`;
-
-export const ImageDate = styled.h2`
-  font-size:18px;
-  color:gray;
-  margin:0px 0px 10px;
-a{
-  color:black;
-}
-`;
-
-
-export const ImagePhoto = styled.img`
-  width: 300px;
-  height: 235px;
-  border-radius:10px;
-`;
-
 export const ImageItem = styled.div`
   position: relative;
   list-style: none;
@@ -71,3 +35,37 @@ export const DeleteImage = styled.button`
  }
 `;
 
+export const ImageName = styled.h1`
+  font-size:24px;
+  margin:0px 0px 10px;
+  width:330px;
+  height:55px;
+  overflow: hidden; 
+  word-wrap: break-word;
+`;
+
+export const ImageDate = styled.h2`
+  font-size:18px;
+  color:gray;
+  margin:0px 0px 10px;
+a{
+  color:black;
+}
+`;
+
+export const ImagePhoto = styled.img`
+  width: 300px;
+  height: 235px;
+  border-radius:10px;
+`;
+
+export const ImageTextArea = styled.textarea`
+  width: 300px;
+  height: 50px;
+  background-color: white;
+  border-radius: 10px;
+  resize: none;
+  color: black;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+`;

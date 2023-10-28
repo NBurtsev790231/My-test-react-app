@@ -10,7 +10,7 @@ margin: 0px auto;
 
 export const WrapperForm = styled.form`
 display: inline-block;
-padding: 20px;
+padding: 20px 90px;
 margin-bottom: 5px;
 border-radius: 5px;
 background-color: #f5f5f5;
@@ -47,8 +47,8 @@ padding: 5px;
 margin: 5px;
 border-radius: 5px;
 border: 1px solid #186318;
-width: 543px;
-height: 100px; 
+width: 525px;
+height: 50px; 
 `;
 
 export const ButtonForm = styled.button`
