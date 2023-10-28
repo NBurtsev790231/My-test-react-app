@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { ButtonForm, ContainerForm, Div, ErrorForm, InputForm, LabelForm, SectionForm, TextForm, WrapperForm } from './styles';
+import { ButtonForm, ContainerForm, ErrorForm, InputForm, LabelForm, SectionForm, TextForm, WrapperForm } from './styles';
 
 //Реализация формы
 export const Form = (props) => {
@@ -10,7 +10,9 @@ const {
   register,
   reset, 
   handleSubmit, 
-  formState: {errors, isValid }} = useForm();
+  formState: {errors}} = useForm({
+    mode: 'onBlur',
+  });
 
 const [NamePhoto, setNamePhoto] = useState();
 
