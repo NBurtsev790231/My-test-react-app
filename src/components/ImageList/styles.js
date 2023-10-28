@@ -63,10 +63,14 @@ export const DeleteImage = styled.button`
   position: absolute;
   right: 5px;
   background-color: rgba(0,0,0,0);
-  border:none;
-  width:40px;
+  border: none;
+  width: 10px;
 
- &:hover ${this} {
-  color: blue;
-}
+ & img {
+  position: absolute;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+ }
 `;
+
