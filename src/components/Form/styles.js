@@ -9,6 +9,7 @@ margin: 0px auto;
 
 
 export const WrapperForm = styled.form`
+display: inline-block;
 padding: 20px;
 margin-bottom: 5px;
 border-radius: 5px;
@@ -38,20 +39,21 @@ export const SectionForm = styled.div`
   vertical-align: middle;
   width: auto;
   height: 100px;
+  padding: 10px;
 `;
 
 export const TextForm = styled.textarea`
 padding: 5px;
 margin: 5px;
 border-radius: 5px;
-border: 2px solid #186318;
-width: 300px;
-height: auto; 
+border: 1px solid #186318;
+width: 543px;
+height: 100px; 
 `;
 
 export const ButtonForm = styled.button`
-padding: 8px;
-border-radius: 4px;
+padding: 8px 20px 8px 20px;
+border-radius: 5px;
 border: none;
 background-color: #0077ff;
 color: #ffffff;

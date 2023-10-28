@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { ButtonForm, ContainerForm, ErrorForm, InputForm, LabelForm, SectionForm, TextForm, WrapperForm } from './styles';
+import { ButtonForm, ContainerForm, Div, ErrorForm, InputForm, LabelForm, SectionForm, TextForm, WrapperForm } from './styles';
 
 //Реализация формы
 export const Form = (props) => {
@@ -31,6 +31,7 @@ const onSubmit = (data) => {
   return (
       <ContainerForm>
         <WrapperForm onSubmit={handleSubmit((data) => onSubmit())}>
+          <SectionForm>  
           <LabelForm>Название фото</LabelForm>
           <InputForm
             maxLength={30}
@@ -49,6 +50,8 @@ const onSubmit = (data) => {
             {errors?.name &&
               <ErrorForm>{errors?.name?.message || 'Error'}</ErrorForm>}
           </div>
+          </SectionForm>
+          
 
           <SectionForm>
             <LabelForm>Ссылка на фото</LabelForm>
@@ -66,7 +69,7 @@ const onSubmit = (data) => {
 
 
           <div>
-            <LabelForm>Описание фото</LabelForm>
+            <label>Описание фото</label>
             <input type="checkbox" 
             onChange={(event) => event.target.checked === true?
               setOnCheckBox(true) : setOnCheckBox(false)}
