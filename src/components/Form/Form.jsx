@@ -12,16 +12,16 @@ const {
   handleSubmit, 
   formState: {errors, isValid }} = useForm();
 
-const [namePhoto, setNamePhoto] = useState();
+const [NamePhoto, setNamePhoto] = useState();
 
 const [linkPhoto, setLinkPhoto] = useState();
 
 const [onCheckBox, setOnCheckBox] = useState();
 
-const [commentPhoto, setCommentPhoto] = useState();
+const [CommentPhoto, setCommentPhoto] = useState();
 
 const onSubmit = (data) => {
-  props.NewImage(namePhoto, linkPhoto, commentPhoto)
+  props.NewImage(NamePhoto, linkPhoto, CommentPhoto)
   setOnCheckBox(false)
   setCommentPhoto('')
   reset();
@@ -47,7 +47,7 @@ const onSubmit = (data) => {
             />
           <div>
             {errors?.name &&
-              <ErrorForm>{errors?.name?.message || 'Error'}</ErrorForm>};
+              <ErrorForm>{errors?.name?.message || 'Error'}</ErrorForm>}
           </div>
 
           <SectionForm>
@@ -60,13 +60,13 @@ const onSubmit = (data) => {
             />
             <div>
             {errors?.link &&
-              <ErrorForm>{errors?.link?.message || 'Error'}</ErrorForm>};
+              <ErrorForm>{errors?.link?.message || 'Error'}</ErrorForm>}
             </div>
           </SectionForm>
 
 
           <div>
-            <LabelForm>Описание фото</LabelForm>;
+            <LabelForm>Описание фото</LabelForm>
             <input type="checkbox" 
             onChange={(event) => event.target.checked === true?
               setOnCheckBox(true) : setOnCheckBox(false)}
@@ -86,7 +86,6 @@ const onSubmit = (data) => {
             {errors.comment && onCheckBox &&
             <ErrorForm>Поле обязательно к заполнению</ErrorForm>}
           </div>
-          
           <ButtonForm>Добавить фото</ButtonForm>
         </WrapperForm>
       </ContainerForm>

@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Form } from '../Form';
 
 import { DeleteImage, ImageDate, ImageItem, ImageListWrapper, ImageName, ImagePhoto, ImageTextArea } from './styles';
+//Импорт иконки как компонента
 import  Delete from './img/icon-delete.png';
 
 function DeleteImageComponent() {
@@ -13,7 +14,7 @@ function DeleteImageComponent() {
 
 export default DeleteImageComponent;
 
-
+//Реализация списка изображений
 export const ImageList = () => {
   const [ImageList, setImageList] = useState([]);
 
@@ -24,7 +25,6 @@ export const ImageList = () => {
   const effectCalled = useRef(false);
 
 
-//Реализация списка изображений
   const MyNewImage = (description, link, comment) => {
     let date = (new Date()).toLocaleDateString('ru', {
       day: 'numeric',
@@ -84,7 +84,7 @@ export const ImageList = () => {
 //Вывод списка изображений
   return (
     <>
-    <Form NewPhoto={(name, link, comment) => MyNewImage(name, link, comment)}/>
+    <Form NewImage={(name, link, comment) => MyNewImage(name, link, comment)}/>
     {codeStatus}
     <ImageListWrapper>
       {ImageList.map((Image) =>
@@ -100,11 +100,8 @@ export const ImageList = () => {
           ('Описание: ' + Image.comment): ''} disabled={true}></ImageTextArea>
         </li>
       </ImageItem>
-      )};
+      )}
     </ImageListWrapper>
     </>
   );
 };
-
-
-//<img src={Delete}/>

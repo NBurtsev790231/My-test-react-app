@@ -3,22 +3,20 @@ import styled from 'styled-components';
 export const ImageListWrapper = styled.div`
 display: flex;
 flex-wrap: wrap;
-max-width: 1500px;
+max-width: 1100px;
 justify-content: center;
-margin:10px auto;
-border: 2px solid #7442c8;
+margin: 10px auto; 
 `;
 
 export const ImageTextArea = styled.textarea`
-  width:340px;
-  height:60px;
+  width: 300px;
+  height: 50px;
   background-color: white;
-  border:none;
+  border-radius: 10px;
   resize: none;
-  color:black;
-  font-size:16px;
+  color: black;
+  font-size: 16px;
   font-family: "Times New Roman", Times, serif;
-  border: 1px solid #000000;
 `;
 
 export const ImageName = styled.h1`
@@ -41,22 +39,21 @@ a{
 
 
 export const ImagePhoto = styled.img`
-  width: 450px;
-  height: 325px;
+  width: 300px;
+  height: 235px;
   border-radius:10px;
-  border: 1px solid #000000;
 `;
 
 export const ImageItem = styled.div`
   position: relative;
   list-style: none;
-  background-color: white;
-  box-shadow: 0px 2px 2px 2px gray;
+  background-color: #f5f5f5;
+  box-shadow: 0px 4px 4px 2px gray;
   border-radius: 5px;
-  margin:0px 10px 20px;
-  padding:10px 10px;
-  width: 500px;
-  height: 500px;
+  margin: 0px 10px 20px;
+  padding: 10px 10px;
+  width: 400px;
+  height: 400px;
 `;
 
 export const DeleteImage = styled.button`
@@ -69,8 +66,8 @@ export const DeleteImage = styled.button`
  & img {
   position: absolute;
   right: 5px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
  }
 `;
 
