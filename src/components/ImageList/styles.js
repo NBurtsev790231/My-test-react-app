@@ -5,7 +5,7 @@ display: flex;
 flex-wrap: wrap;
 max-width: 1100px;
 justify-content: center;
-margin: 10px auto; 
+margin: 10px auto;
 `;
 
 export const ImageItem = styled.div`

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { Form } from '../Form';
 
-import { DeleteImage, ImageDate, ImageItem, ImageListContainer, ImageListWrapper, ImageName, ImagePhoto, ImageTextArea } from './styles';
+import { DeleteImage, ImageDate, ImageItem, ImageListWrapper, ImageName, ImagePhoto, ImageTextArea } from './styles';
 //Импорт иконки как компонента
 import  Delete from './img/icon-delete.png';
 
@@ -20,7 +20,7 @@ export const ImageList = () => {
 
   const [codeStatus, setCodeStatus] = useState('');
 
-  const url = 'https://api.unsplash.com/photos/random/?query=parks&count=5&client_id=ue66y_t3CMluJDMhaNONYCxoVmRZCFUTbyH9Sjlj-jA';
+  const url = 'https://api.unsplash.com/photos/random/?query=parks&count=5&client_id=mrucTEmuawWqB6-Lh2grrRFmxxleFBwqvNagOozE_gs';
 
   const effectCalled = useRef(false);
 
@@ -104,6 +104,6 @@ export const ImageList = () => {
       )}
     </ImageListWrapper>
     </>
-  );
-};
+  )
+}
 
