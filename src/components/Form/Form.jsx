@@ -71,7 +71,7 @@ const onSubmit = (data) => {
 
 
           <div>
-            <label>Описание фото</label>
+            <label>Есть описание</label>
             <input type="checkbox" 
             onChange={(event) => event.target.checked === true?
               setOnCheckBox(true) : setOnCheckBox(false)}
